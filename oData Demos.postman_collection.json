@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "77958af4-5801-4660-8fcd-f4e53256ef5c",
+		"name": "oData Demos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://services.odata.org/V4/(S(qjbqf0irwigqu11z40kh3djd))/TripPinServiceRW/$batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "POST https://services.odata.org/V4/TripPinServiceRW/$batch\nOData-Version: 4.0\nContent-Type: multipart/mixed;boundary=batch_36522ad7-fc75-4b56-8c71-56071383e77b\n\n\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\nContent-Type: application/http\nContent-Transfer-Encoding:binary\n\nGET https://services.odata.org/V4/TripPinServiceRW/Airlines HTTP/1.1\nAccept: application/json;odata.metadata=minimal\n\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\nContent-Type: application/http\nContent-Transfer-Encoding:binary\nContent-ID: 1\n\nPOST https://services.odata.org/V4/TripPinServiceRW/Airlines HTTP/1.1\nOData-Version: 4.0\nContent-Type: application/json;odata.metadata=minimal\nAccept: application/json;odata.metadata=minimal\n\n{\n\"@odata.type\" : \"Microsoft.OData.SampleService.Models.TripPin.Airline\",\n\"AirlineCode\" : \"EK\",\n\"Name\" : \"Emirates Airline\"\n}\n\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b\nContent-Type: application/http\nContent-Transfer-Encoding:binary\n\nGET https://services.odata.org/V4/TripPinServiceRW/Airlines HTTP/1.1\nAccept: application/json;odata.metadata=minimal\n\n--batch_36522ad7-fc75-4b56-8c71-56071383e77b--"
+				},
+				"url": {
+					"raw": "https://services.odata.org/V4/(S(qjbqf0irwigqu11z40kh3djd))/TripPinServiceRW/$batch",
+					"protocol": "https",
+					"host": [
+						"services",
+						"odata",
+						"org"
+					],
+					"path": [
+						"V4",
+						"(S(qjbqf0irwigqu11z40kh3djd))",
+						"TripPinServiceRW",
+						"$batch"
+					]
+				},
+				"description": "These tests are for testing the oData with Batch requests"
+			},
+			"response": []
+		},
+		{
+			"name": "https://services.odata.org/V2/Northwind/Northwind.svc/$batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed;boundary=batch_8008-578f-c4c5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_8008-578f-c4c5\nContent-Type: application/http\nContent-Transfer-Encoding: binary\n\nGET Customers HTTP/1.1\nAccept: application/json\nAccept-Language: en\nDataServiceVersion: 2.0\nMaxDataServiceVersion: 2.0\n\n\n--batch_8008-578f-c4c5\nContent-Type: application/http\nContent-Transfer-Encoding: binary\n\nGET Categories HTTP/1.1\nAccept: application/json\nAccept-Language: en\nDataServiceVersion: 2.0\nMaxDataServiceVersion: 2.0\n\n\n--batch_8008-578f-c4c5\nContent-Type: application/http\nContent-Transfer-Encoding: binary\n\nGET Regions HTTP/1.1\nAccept: application/json\nAccept-Language: en\nDataServiceVersion: 2.0\nMaxDataServiceVersion: 2.0\n\n\n--batch_8008-578f-c4c5--"
+				},
+				"url": {
+					"raw": "https://services.odata.org/V2/Northwind/Northwind.svc/$batch",
+					"protocol": "https",
+					"host": [
+						"services",
+						"odata",
+						"org"
+					],
+					"path": [
+						"V2",
+						"Northwind",
+						"Northwind.svc",
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://services.odata.org/V4/(S(smpdads5ddnxm2pr5zbbgsoe))/TripPinServiceRW",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://services.odata.org/V4/(S(smpdads5ddnxm2pr5zbbgsoe))/TripPinServiceRW",
+					"protocol": "https",
+					"host": [
+						"services",
+						"odata",
+						"org"
+					],
+					"path": [
+						"V4",
+						"(S(smpdads5ddnxm2pr5zbbgsoe))",
+						"TripPinServiceRW"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
